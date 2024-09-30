@@ -24,19 +24,20 @@ function App() {
     fetchData();
   }, []);
 
-  return;
-  <>
-    <div className="App">
-      {fetchError && <p>{fetchError}</p>}
-      {need && (
-        <div className="needs">
-          {needs.map((need) => (
-            <p>{need.Applainces}</p>
-          ))}
-        </div>
-      )}
-    </div>
-  </>;
+  return (
+    <>
+      <div className="App">
+        {fetchError && <p>{fetchError}</p>}
+        {needs && (
+          <div className="needs">
+            {needs.map((need) => (
+              <p>{need.Applainces}</p>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
+  );
 }
 
 export default App;
